@@ -1,0 +1,107 @@
+dialog_box : dialog{
+
+
+ label = "Figuras";
+
+ :boxed_row{
+ label = "Seleccione";
+ 
+ :radio_button{
+ label = "Circulo";
+ key = "fg_circle";
+ }
+ 
+ :radio_button{
+ label = "Rectangulo";
+ key = "fg_recta";
+ }
+
+ :radio_button{
+ label = "Linea";
+ key = "fg_line";
+ }
+ 
+ }
+	
+ :boxed_row {
+ label = "Circulo";	
+ key = "box_circle";
+ 
+ :edit_box {
+ label = "Radio";
+ edit_width = 9;
+ value = "10";
+ key = "radio";
+ }
+
+ 
+:button {
+ label="Dibujar Ciruclo";
+ key = "draw_circle";
+ }	
+ 
+ :edit_box {
+ label = "Cordenada X";
+ edit_width = 9;
+  
+ key = "center_x";
+ }
+ 
+  :edit_box {
+ label = "Cordenada Y";
+ edit_width = 9;
+  
+ key = "center_y";
+ }
+     
+ :boxed_radio_row {
+ label = "Color";
+ 
+ :radio_button {
+ 
+ label = "Rojo";
+	
+ 
+}
+}
+}
+
+:boxed_row{
+label = "Rectangulo";
+is_enabled = false;
+key = "box_rect";
+
+:edit_box {
+label = "Primer Punto";
+edit_width = 9;
+key = "firstcordenada";
+}
+
+: edit_box {
+label = "Segundo Punto";
+edit_width = 9;
+key = "secondcordenada";
+}
+	  
+}
+
+:boxed_row{
+label = "Linea";
+key = "box_line";
+
+: edit_box {
+label = "Primer Punto";
+edit_width = 9;
+key = "flcordenada";
+}
+: edit_box {
+label = "Segundo Punto";
+edit_width = 9;
+key = "slcordenada";
+}
+
+}
+	
+ok_cancel;
+}
+
