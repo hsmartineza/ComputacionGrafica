@@ -26,7 +26,7 @@ dialog_box : dialog{
  :boxed_row {
  label = "Circulo";	
  key = "box_circle";
- 
+ //RADIO
  :edit_box {
  label = "Radio";
  edit_width = 9;
@@ -34,12 +34,9 @@ dialog_box : dialog{
  key = "radio";
  }
 
- 
-:button {
- label="Dibujar Ciruclo";
- key = "draw_circle";
- }	
- 
+ //CENTRO
+ :boxed_radio_row{
+ label = "Centro";
  :edit_box {
  label = "Cordenada X";
  edit_width = 9;
@@ -53,51 +50,110 @@ dialog_box : dialog{
   
  key = "center_y";
  }
-     
- :boxed_radio_row {
- label = "Color";
+
+ }
+
  
- :radio_button {
- 
- label = "Rojo";
-	
- 
+ :column{
+ :button {
+  label="Dibujar Circulo";
+  key = "draw_circle";
+ }
+
 }
 }
-}
+
+//CAJA RECTANGULO
 
 :boxed_row{
 label = "Rectangulo";
 is_enabled = false;
 key = "box_rect";
 
+//Centro
+:boxed_row{
+label = "Centro del rectangulo";
+
 :edit_box {
-label = "Primer Punto";
-edit_width = 9;
-key = "firstcordenada";
+label = "Eje x";
+edit_width = 5;
+key = "crx";
 }
 
 : edit_box {
-label = "Segundo Punto";
-edit_width = 9;
-key = "secondcordenada";
-}
-	  
+label = "Eje y";
+edit_width = 5;
+key = "cry";
 }
 
+}
+//Lenght
+: edit_box {
+label = "Altura";
+edit_width = 9;
+key = "hrect";
+}
+
+//width
+: edit_box {
+label = "Longitud";
+edit_width = 9;
+key = "wrect";
+}
+
+ :column{
+ :button {
+  label="Dibujar Rectangulo";
+  key = "draw_rect";
+ }
+
+}
+
+}
+
+//CAJA LINEA
 :boxed_row{
 label = "Linea";
 key = "box_line";
 
-: edit_box {
-label = "Primer Punto";
+//Punto Inicial
+:boxed_row{
+label = "Punto Inicial";
+
+:edit_box {
+label = "Eje X";
 edit_width = 9;
-key = "flcordenada";
+key = "p1x";
 }
 : edit_box {
-label = "Segundo Punto";
+label = "Eje Y";
 edit_width = 9;
-key = "slcordenada";
+key = "p1y";
+}
+}
+
+//Punto Final
+:boxed_row{
+label = "Punto Final";
+
+:edit_box {
+label = "Eje X";
+edit_width = 9;
+key = "p2x";
+}
+: edit_box {
+label = "Eje Y";
+edit_width = 9;
+key = "p2y";
+}
+}
+
+ :column{
+ :button {
+  label="Dibujar Linea";
+  key = "draw_line";
+ }
+
 }
 
 }
