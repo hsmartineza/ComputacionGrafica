@@ -418,7 +418,6 @@
   Return
 )
 
-;;Retorna una lista de numeros de columna y celda
 (defun ColumnRow (Cell$ / Column$ Char$ Row#)
   (setq Column$ "")
   (while (< 64 (ascii (setq Char$ (strcase (substr Cell$ 1 1)))) 91)
@@ -432,7 +431,8 @@
   );if
 );defun ColumnRow
 
-;;Convierte un alpha string en un numero
+;Cierra el archivo Excel
+
 (defun Alpha2Number (Str$ / Num#)
   (if (= 0 (setq Num# (strlen Str$)))
     0
@@ -442,8 +442,6 @@
   );if
 );defun Alpha2Number
 
-
-;;Convierte numero en un string alfa
 (defun Number2Alpha (Num# / Val#)
   (if (< Num# 27)
     (chr (+ 64 Num#))
@@ -454,8 +452,6 @@
   );if
 );defun Number2Alpha
 
-
-;;Cambia un numero real en un numero corto en formato string
 (defun rtosr (RealNum~ / DimZin# ShortReal$)
   (setq DimZin# (getvar "DIMZIN"))
   (setvar "DIMZIN" 8)
